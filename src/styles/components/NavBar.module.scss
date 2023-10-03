@@ -1,0 +1,79 @@
+.NavBar {
+    // border-bottom: 1px solid #ccc;
+    z-index: 100;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10rem;
+    background-color: #fff;
+    // border-bottom-left-radius: 1rem;
+    // border-bottom-right-radius: 1rem;
+    border-bottom: 2px solid #FFB320;
+    backdrop-filter: blur(5px);
+    @media only screen and (max-width: 900px){
+        padding: 1rem 2rem;
+    }
+    .LogoLink{
+        .Logo{
+            height: 4rem;
+        }
+    }
+
+    .Links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // gap: 2rem;
+        flex-direction: row;
+
+        @media only screen and (max-width: 900px){
+            display: none;
+        }
+        .Link {
+            cursor: pointer;
+            padding: 1.5rem 1rem;
+            border: none;
+            text-transform: uppercase;
+            // background: #ffbc0d;
+
+            border-top: 2px solid transparent;
+
+            color: #949494;
+            font-family: Plus Jakarta Sans;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.25px;
+            text-decoration: none;
+        }
+
+        .Link:nth-child(1){
+            color: #161616;
+        }
+    }
+
+    .Btn {
+        cursor: pointer;
+        padding: 1.8rem 2rem;
+        border: none;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        // background: #ffbc0d;
+        color: #fff;
+        font-family: Plus Jakarta Sans;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.25px;
+        background: #303030;
+
+        &:hover {
+            background: #ffd15c;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "products": [
+      {
+        "Id": 1,
+        "Category": "Fast Food",
+        "Name": "Cheeseburger",
+        "BannerImageLink": "https://ik.imagekit.io/wrapngo/dishes/egg%20mutton%20dum%20biriyani.png?updatedAt=1696269077215",
+        "Price": 5.99,
+        "Discount": 10,
+        "Type": "NonVeg"
+      },
+      {
+        "Id": 2,
+        "Category": "Fast Food",
+        "Name": "Veggie Burger",
+        "BannerImageLink": "https://ik.imagekit.io/wrapngo/dishes/Mutton%20Kasha.png?updatedAt=1696269416052",
+        "Price": 4.99,
+        "Discount": 5, 
+        "Type": "Veg"
+      },
+      {
+        "Id": 3,
+        "Category": "Dessert",
+        "Name": "Chocolate Ice Cream",
+        "BannerImageLink": "https://ik.imagekit.io/wrapngo/dishes/Mushroom%20Galouti%20Kebab.png?updatedAt=1696269079091",
+        "Price": 3.50,
+        "Discount": 0, 
+        "Type": "Veg"
+      },
+      {
+        "Id": 4,
+        "Category": "Beverages",
+        "Name": "Chicken Soup",
+        "BannerImageLink": "https://ik.imagekit.io/wrapngo/dishes/egg%20dum%20biriyani.png?updatedAt=1696269076628",
+        "Price": 2.50,
+        "Discount": 8, 
+        "Type": "NonVeg"
+      }
+    ]
+  }
+  

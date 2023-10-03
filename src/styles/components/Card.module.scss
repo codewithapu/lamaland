@@ -1,0 +1,115 @@
+.CardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    .Card {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 1rem;
+        width: 30rem;
+        overflow: hidden;
+        border: 1px solid #cacaca;
+    
+        .Banner {
+            height: 30rem;
+            width: 30rem;
+            // aspect-ratio: 4/3;
+            width: 100%;
+            position: relative;
+    
+            .VegType{
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 1rem 1rem;
+            }
+    
+            .PriceTag {
+                border-bottom-right-radius: 2rem;
+                border-top-left-radius: 0.5rem;
+                padding: 1rem 2rem;
+                background-color: #fff;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .DiscountBadge {
+                    color: #000;
+                    text-transform: uppercase;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    padding: 0.2rem;
+                    background: #59ff4b;
+                }
+    
+                .Price {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 0.5rem;
+                    .DiscountedPrice {
+                        color: #000;
+                        font-family: Urbanist;
+                        font-size: 2.5rem;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        letter-spacing: -0.4px;
+                    }
+    
+                    .MainPrice {
+                        text-decoration: line-through;
+                        color: #959595;
+                        font-family: Urbanist;
+                        font-size: 1.7rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: -0.24px;
+                        text-decoration-line: strikethrough;
+                    }
+                }
+            }
+            .FoodImage {
+                
+                height: 30rem;
+            }
+        }
+        .Tag {
+            width: 30rem;
+            padding: 2rem;
+            .FoodLabel {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                .SubCategory {
+                    text-transform: uppercase;
+                    color: #858585;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    letter-spacing: 0.7px;
+                }
+                .FoodTitle {
+                    color: #000;
+                    font-family: Urbanist;
+                    font-size: 2.4rem;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 110%; /* 15.4px */
+                    letter-spacing: -0.28px;
+                }
+            }
+        }
+    }
+}
+
+

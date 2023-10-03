@@ -35,6 +35,15 @@
         "Price": 2.50,
         "Discount": 8, 
         "Type": "NonVeg"
+      },
+      {
+        "Id": 5,
+        "Category": "Gravy",
+        "Name": "Mutton Korma",
+        "BannerImageLink": "https://ik.imagekit.io/wrapngo/dishes/Mutton%20Korma.png?updatedAt=1696269288944",
+        "Price": 600,
+        "Discount": 20, 
+        "Type": "NonVeg"
       }
     ]
   }

@@ -1,0 +1,118 @@
+.Wraper {
+    margin-top: 12rem;
+    padding: 4rem 5rem;
+    .MainLabel {
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 78.5%;
+        letter-spacing: -2.5px;
+    }
+
+    .Container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        background: #f4f4f4;
+        margin-top: 4rem;
+        padding: 2rem 1.5rem;
+        max-width: 45rem;
+        gap: 2rem;
+        overflow-y: scroll;
+        &::-webkit-scrollbar-track {
+            background-color: #e5e5e5;
+        }
+
+        &::-webkit-scrollbar-track:hover {
+            background-color: #dcdcdc;
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        max-height: 50vh;
+        .CartItems {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 1rem;
+
+            .Left {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: row;
+                gap: 1rem;
+
+                .Count {
+                    color: #8b8b8b;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.5rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 78.5%;
+                }
+
+                .DishImage {
+                    height: 10rem;
+                }
+            }
+
+            .MoreDetails {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+
+                .Details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    .Category {
+                        color: #6d6d6d;
+                        font-family: Plus Jakarta Sans;
+                        font-size: 1rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 78.5%;
+                        letter-spacing: 1px;
+                    }
+
+                    .DishName {
+                        color: #000;
+                        font-family: Plus Jakarta Sans;
+                        text-transform: uppercase;
+                        font-size: 1.6rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 78.5%; /* 15.7px */
+                        letter-spacing: -0.01rem;
+                    }
+                }
+
+                .Price {
+                    color: #000;
+                    font-family: Plus Jakarta Sans;
+                    font-size: 1.9rem;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 78.5%; /* 24.335px */
+                    letter-spacing: -1.24px;
+                }
+            }
+        }
+    }
+}

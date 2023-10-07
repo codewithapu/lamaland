@@ -1,0 +1,55 @@
+.Container {
+    margin-top: 20rem;
+    padding: 0rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .TermsLabel {
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        .UpdatedDate {
+            color: #000;
+            font-family: Plus Jakarta Sans;
+            font-size: 1.3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 78.5%; /* 11.775px */
+        }
+
+        .Label {
+            color: #000;
+            font-family: Plus Jakarta Sans;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 78.5%; /* 47.885px */
+            letter-spacing: -2.44px;
+        }
+    }
+
+    .Terms {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .Heading {
+            color: #000;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%;
+            font-style: italic;
+            font-family: DM Serif Display;
+        }
+
+        .Content {
+            color: #000;
+            font-family: Plus Jakarta Sans;
+            font-size: 1.7rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 180%;
+            letter-spacing: -0.025rem;
+        }
+    }
+}

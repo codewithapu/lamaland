@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/components/Card.module.scss'
 import Link from 'next/link'
-import AddToCartButton from './Button/AddToCartBtn'
 import data from '../data/product.json'
 
 const Card: React.FC = () => {
@@ -36,7 +35,6 @@ const Card: React.FC = () => {
               <h1 className={styles.FoodTitle}>{product.Name}</h1>
             </div>
             <div className={styles.Button}>
-              {/* <AddToCartButton /> */}
             </div>
           </div>
 

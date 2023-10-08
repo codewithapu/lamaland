@@ -2,8 +2,12 @@
     margin-top: 20rem;
     padding: 0rem 5rem;
     display: flex;
-    flex-direction: column;
     gap: 3rem;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    @media only screen and (max-width: 900px){
+        padding: 0rem 2rem;
+    }
     .TermsLabel {
         display: flex;
         gap: 2rem;

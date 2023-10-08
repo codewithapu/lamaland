@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Veg Pizza",
+        "price": 10,
+        "imageUrl": "https://example.com/veg-pizza.jpg",
+        "category": "VEG"
+    },
+    {
+        "id": 2,
+        "name": "Chicken Burger",
+        "price": 8,
+        "imageUrl": "https://example.com/chicken-burger.jpg",
+        "category": "NON_VEG"
+    },
+    {
+        "id": 3,
+        "name": "Veg Salad",
+        "price": 7,
+        "imageUrl": "https://example.com/veg-salad.jpg",
+        "category": "VEG"
+    }
+]

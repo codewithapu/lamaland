@@ -1,6 +1,10 @@
 .Wraper {
     margin-top: 12rem;
     padding: 4rem 5rem;
+    max-width: 100rem;
+    @media only screen and (max-width: 900px){
+        padding: 4rem 1rem;
+    }
     .MainLabel {
         color: #000;
         font-family: Plus Jakarta Sans;
@@ -21,27 +25,8 @@
         padding: 2rem 1.5rem;
         max-width: 45rem;
         gap: 2rem;
-        overflow-y: scroll;
-        &::-webkit-scrollbar-track {
-            background-color: #e5e5e5;
-        }
-
-        &::-webkit-scrollbar-track:hover {
-            background-color: #dcdcdc;
-        }
-
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: #888;
-        }
-
-        &::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        max-height: 50vh;
+        
+        // max-height: 50vh;
         .CartItems {
             display: flex;
             align-items: center;
@@ -95,7 +80,7 @@
                         color: #000;
                         font-family: Plus Jakarta Sans;
                         text-transform: uppercase;
-                        font-size: 1.6rem;
+                        font-size: 1.4rem;
                         font-style: normal;
                         font-weight: 700;
                         line-height: 78.5%; /* 15.7px */

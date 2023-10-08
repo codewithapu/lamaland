@@ -44,7 +44,7 @@ export default function Terms() {
           </p>
 
 
-          <p className={styles.Content}>
+          <div className={styles.Content}>
             Lama Land may collect and store the following user data:
             <ul>
               <li>            Name: To personalize your shopping experience.
@@ -62,14 +62,14 @@ export default function Terms() {
                 Avatar: To enhance your user profile within the Lama Land platform.
               </li>
             </ul>
-          </p>
+          </div>
 
 
           <p className={styles.Heading}>
             Use of User Data
           </p>
 
-          <p className={styles.Content}>
+          <div className={styles.Content}>
             Your privacy is important to us. Lama Land will use the collected data for the following purposes:
 
             <ul>
@@ -85,7 +85,7 @@ export default function Terms() {
               <li>
                 Contacting users for customer support and resolution of issues.              </li>
             </ul>
-          </p>
+          </div>
 
 
           <p className={styles.Heading}>

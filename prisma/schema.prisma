@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id             Int      @id @default(autoincrement())
+  name           String
+  username       String   @unique
+  email          String   @unique
+  creator        String   @default("Creator")
+  updateCount    Int      @default(0)
+  lastUpdateDate DateTime @default(now())
+  imageUrl       String?  @default("eduburner.in/images.avatar.jpg")
+
+  educations      Education[]
+  workExperiences WorkExperience[]
+  projects        Project[]
+}
+
+model Education {
+  id               Int    @id @default(autoincrement())
+  qualification    String
+  yearOfGraduation Int
+  user_id          Int
+  user             User   @relation(fields: [user_id], references: [id])
+
+  @@index([user_id])
+}
+
+model WorkExperience {
+  id          Int    @id @default(autoincrement())
+  companyName String
+  year        Int
+  user_id     Int
+  user        User   @relation(fields: [user_id], references: [id])
+
+  @@index([user_id])
+}
+
+model Project {
+  id      Int    @id @default(autoincrement())
+  link    String
+  year    Int
+  user_id Int
+  user    User   @relation(fields: [user_id], references: [id])
+
+  @@index([user_id])
+}

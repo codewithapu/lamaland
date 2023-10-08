@@ -34,8 +34,9 @@ const Card: React.FC = () => {
               <p className={styles.SubCategory}>{product.Category}</p>
               <h1 className={styles.FoodTitle}>{product.Name}</h1>
             </div>
-            <div className={styles.Button}>
-            </div>
+            <button className={styles.Button}>
+              Add to Cart
+            </button>
           </div>
 
         </div>

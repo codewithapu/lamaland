@@ -1,0 +1,86 @@
+.Wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8rem;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0rem 2rem;
+
+    .OnBoardingBanner {
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .LoginBtns {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        .Providers {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.2rem;
+            max-width: 35rem;
+            width: 100%;
+
+            button {
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                background: #2c2c2e;
+                padding: 2rem 3rem;
+                align-items: center;
+
+                color: #fff;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-feature-settings: "dlig" on;
+                font-family: Plus Jakarta Sans;
+                font-size: 1.9rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 110%; /* 2.2rem */
+                letter-spacing: -0.06rem;
+                width: 100%;
+                .Label {
+                    display: flex;
+                    gap: 1rem;
+                    flex-shrink: 0;
+                }
+            }
+            .GithubBtn {
+                border-radius: 1.5rem 1.5rem 0rem 0rem;
+
+                border: none;
+            }
+            .GoogleBtn {
+                border-radius: 0rem 0rem 1.5rem 1.5rem;
+
+                display: flex;
+                border: none;
+            }
+        }
+        .GuestLink {
+            color: #ababab;
+            font-family: Plus Jakarta Sans;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 2rem; /* 111.111% */
+            letter-spacing: -0.036rem;
+            text-decoration: none;
+            span{
+                text-decoration: underline;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -9,9 +9,9 @@
     // justify-content: space-between;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #F4F1EC;
 
-    // border-bottom: 2px solid #ffb320;
+    border-bottom: 1px solid #cfcfcf;
 
     .Top {
         padding: 2rem 5rem;
@@ -51,6 +51,23 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+                .CountItems{
+                    position: absolute;
+                    top: 0.6rem;
+                    left: 2.6rem;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    border-radius: 45rem;
+                    color: #fff;
+                    background-color: #ff1212;
+                    font-family: Plus Jakarta Sans;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
 
@@ -64,6 +81,7 @@
         font-size: 13px;
         font-style: normal;
         background: #f5f5f7;
+        background: #fff;
         font-weight: 600;
         line-height: 100%;
         text-align: center;

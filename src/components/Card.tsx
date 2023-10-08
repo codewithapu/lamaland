@@ -3,8 +3,34 @@ import Image from 'next/image'
 import styles from '@/styles/components/Card.module.scss'
 import Link from 'next/link'
 import data from '../data/product.json'
+import { useCart } from '../context/CartContext';
+
+type ProductType = {
+  Id: string | number; 
+  Name: string;
+  Price: number;
+  Discount: number;
+  BannerImageLink: string;
+};
 
 const Card: React.FC = () => {
+
+  // const addToCart = (product: ProductType) => {
+  //   const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+  //   currentCart.push(product);
+  //   localStorage.setItem('cart', JSON.stringify(currentCart));
+  // };
+
+
+  const { updateCartCount } = useCart();
+
+  const addToCart = (product: ProductType) => {
+    const currentCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    currentCart.push(product);
+    localStorage.setItem('cart', JSON.stringify(currentCart));
+    updateCartCount(); // Update cart count in context
+  };
+
   return (
     <div className={styles.CardContainer}>
 
@@ -34,7 +60,7 @@ const Card: React.FC = () => {
               <p className={styles.SubCategory}>{product.Category}</p>
               <h1 className={styles.FoodTitle}>{product.Name}</h1>
             </div>
-            <button className={styles.Button}>
+            <button className={styles.Button} onClick={() => addToCart(product)}>
               Add to Cart
             </button>
           </div>

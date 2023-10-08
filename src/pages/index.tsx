@@ -5,6 +5,7 @@ import NavBar from '@/components/NavBar'
 import Card from '@/components/Card'
 
 export default function Home() {
+  
   return (
     <>
 
@@ -18,9 +19,12 @@ export default function Home() {
         <NavBar />
 
       </div>
+      
 
-      <div className={styles.Dishes}>
-        <Card/>
+      <div className={styles.ContentWraper}>
+
+        <img src="https://ik.imagekit.io/wrapngo/Frame%20100.png?updatedAt=1696798732059" className={styles.OfferBanner} />
+        {/* <Card/> */}
       </div>
     </>
   )

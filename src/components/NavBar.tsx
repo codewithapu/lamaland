@@ -2,25 +2,39 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/components/NavBar.module.scss'
 import Link from 'next/link'
-
 import { useRouter } from 'next/router';
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { useSession, signOut, signIn } from 'next-auth/react'
+import { useCart } from '../context/CartContext'; 
 
 
 const NavBar: React.FC = () => {
+
+  const { cartCount } = useCart();
+
   const defaultAvatar = '/avatar.webp';
 
   const { data: session } = useSession();
   const router = useRouter();
 
   const handleAvatarClick = () => {
-    // If user is not logged in, redirect to sign-in page
     if (!session) {
       signIn()
     }
   }
+
+
+  // The Count State Starts
+
+  // const [cartCount, setCartCount] = useState(0);
+
+  // useEffect(() => {
+  //   // Fetch cart from local storage
+  //   const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  //   setCartCount(cart.length);
+  // }, []); // The empty dependency array means this useEffect will run once when the component mounts
+
+  // The Count State Ends
 
 
   const handleCopy = async (event: React.MouseEvent<HTMLDivElement>) => {
@@ -51,7 +65,7 @@ const NavBar: React.FC = () => {
               // If logged in, display the user's image
               <Link href="/profile" className={styles.Profile}>
                 <Image
-                alt='User Avatar'
+                  alt='User Avatar'
                   className={styles.Avatar}
                   src={session.user.image || defaultAvatar}
                   width={45}
@@ -65,7 +79,7 @@ const NavBar: React.FC = () => {
                 className={styles.Avatar}
                 src="/avatar.webp"
                 alt="Default avatar"
-                style={{ borderRadius: '10rem'}}
+                style={{ borderRadius: '10rem' }}
                 width={45}
                 height={45}
               />
@@ -83,7 +97,9 @@ const NavBar: React.FC = () => {
           </Link>
 
           <div className={styles.CartBtn}>
-            <Link href="/cart" className={styles.Cart}>
+            <Link href="/listcart" className={styles.Cart}>
+              {/* <p className={styles.CountItems}>{cartCount}</p> */}
+              {cartCount > 0 && <p className={styles.CountItems}>{cartCount}</p>}
               <svg xmlns="http://www.w3.org/2000/svg" width="23" height="25" viewBox="0 0 23 25" fill="none">
                 <path d="M5.60057 21.9103C5.60057 22.4386 5.75724 22.9551 6.05075 23.3943C6.34426 23.8336 6.76145 24.176 7.24955 24.3782C7.73764 24.5803 8.27473 24.6332 8.79289 24.5302C9.31105 24.4271 9.78701 24.1727 10.1606 23.7991C10.5342 23.4256 10.7886 22.9496 10.8916 22.4314C10.9947 21.9133 10.9418 21.3762 10.7396 20.8881C10.5375 20.4 10.1951 19.9828 9.75581 19.6893C9.31653 19.3958 8.80008 19.2391 8.27177 19.2391C7.56354 19.2398 6.88453 19.5215 6.38374 20.0223C5.88295 20.5231 5.60129 21.2021 5.60057 21.9103ZM9.31253 21.9103C9.31253 22.1162 9.25149 22.3174 9.13713 22.4885C9.02277 22.6597 8.86022 22.7931 8.67005 22.8718C8.47988 22.9506 8.27061 22.9712 8.06873 22.9311C7.86684 22.8909 7.68139 22.7918 7.53584 22.6462C7.39029 22.5007 7.29116 22.3152 7.25101 22.1133C7.21085 21.9115 7.23146 21.7022 7.31023 21.512C7.389 21.3219 7.5224 21.1593 7.69355 21.0449C7.8647 20.9306 8.06592 20.8695 8.27177 20.8695C8.54757 20.8703 8.81188 20.9801 9.0069 21.1752C9.20193 21.3702 9.31181 21.6345 9.31253 21.9103Z" fill="#111111" />
                 <path d="M16.7908 21.9103C16.7908 22.4386 16.9474 22.9551 17.2409 23.3943C17.5345 23.8336 17.9516 24.176 18.4397 24.3782C18.9278 24.5803 19.4649 24.6332 19.9831 24.5302C20.5013 24.4271 20.9772 24.1727 21.3508 23.7991C21.7244 23.4256 21.9788 22.9496 22.0818 22.4314C22.1849 21.9133 22.132 21.3762 21.9298 20.8881C21.7277 20.4 21.3853 19.9828 20.946 19.6893C20.5067 19.3958 19.9903 19.2391 19.462 19.2391C18.7537 19.2398 18.0747 19.5215 17.5739 20.0223C17.0732 20.5231 16.7915 21.2021 16.7908 21.9103ZM20.5027 21.9103C20.5027 22.1162 20.4417 22.3174 20.3273 22.4885C20.213 22.6597 20.0504 22.7931 19.8602 22.8718C19.6701 22.9506 19.4608 22.9712 19.2589 22.9311C19.057 22.8909 18.8716 22.7918 18.726 22.6462C18.5805 22.5007 18.4814 22.3152 18.4412 22.1133C18.401 21.9115 18.4217 21.7022 18.5004 21.512C18.5792 21.3219 18.7126 21.1593 18.8838 21.0449C19.0549 20.9306 19.2561 20.8695 19.462 20.8695C19.7378 20.8703 20.0021 20.9801 20.1971 21.1752C20.3921 21.3702 20.502 21.6345 20.5027 21.9103Z" fill="#111111" />

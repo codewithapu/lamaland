@@ -1,0 +1,201 @@
+// All Rights Reserved Edu Burner 2023
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap");
+
+$CarbonBlack: #070707;
+$CrystalWhite: #e8e5ff;
+$SlateCarbon: #121212;
+$CarbonDust: #232323;
+
+// Font Variables
+
+@mixin HeadingX {
+    font-family: Urbanist;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.06rem;
+}
+
+@mixin HeadingXL {
+    font-family: Urbanist;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 4rem */
+    letter-spacing: -0.08rem;
+}
+
+@mixin RegularM {
+    font-family: Urbanist;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.02rem;
+}
+// Font Variables
+
+@mixin Smooth {
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin LinkChips {
+    @include FlexCenter;
+    padding: 1rem 2rem;
+    gap: 1rem;
+
+    border-radius: 5rem;
+    background: $CarbonDust;
+    text-decoration: none;
+
+    @include RegularM;
+    color: #a7a7a7;
+
+    @include Smooth();
+    // border: 2px solid #232323;
+
+    border: 2px solid #4a4a4a;
+    outline-offset: 2px;
+    &:hover {
+        border: 2px solid $CrystalWhite;
+        outline-offset: 2px;
+        color: $CrystalWhite;
+    }
+}
+
+.MNavBar {
+    z-index: 100;
+    @include Smooth;
+    @include FlexCenter;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0rem 0rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.88) 39.37%, #000 100%);
+
+    .NavLinks {
+        // border-top: 2px solid #000000c4 ;
+        padding: 1rem 2rem;
+        // background: #000000ba;
+        // backdrop-filter: blur(30px);
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+
+        display: none;
+        @media screen and (max-width: 800px) {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+        }
+
+        a {
+            text-decoration: none;
+            svg {
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+
+        .EUser {
+            border: 4px solid transparent;
+            border-radius: 4rem;
+            cursor: pointer;
+            @include FlexCenter();
+            @include Smooth();
+            align-items: center;
+            justify-content: center;
+
+
+            .AvatarWraper{
+                .Avatar {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 9rem;
+                    &:hover {
+                        border: 4px solid $CarbonDust;
+                    }
+                }
+            }
+
+            .Avatar {
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 9rem;
+                &:hover {
+                    border: 4px solid $CarbonDust;
+                }
+            }
+        }
+        
+        .Link {
+            .Element {
+                fill: #a7a7a7;
+            }
+
+            .UserSearch {
+                display: flex;
+                flex-direction: row;
+                @include FlexCenter;
+                gap: 3rem;
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+
+            
+        }
+
+        .Link {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            .Element path {
+                fill: #a7a7a7;
+            }
+
+            .ActiveIndicator {
+                display: block;
+                border-radius: 50rem;
+                background: transparent;
+                height: 0.4rem;
+                width: 0.4rem;
+            }
+        }
+
+        .Active {
+            // background-color: #303030;
+            .Element path {
+                fill: $CrystalWhite;
+            }
+
+            .ActiveIndicator {
+                display: block;
+                border-radius: 50rem;
+                background: #43fa56;
+                height: 0.4rem;
+                width: 0.4rem;
+            }
+        }
+
+        .Active {
+            // background-color: #303030;
+            .Element {
+                fill: $CrystalWhite;
+            }
+        }
+    }
+}

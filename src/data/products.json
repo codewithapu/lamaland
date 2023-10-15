@@ -1,23 +1,116 @@
-[
-    {
-        "id": 1,
-        "name": "Veg Pizza",
-        "price": 10,
-        "imageUrl": "https://example.com/veg-pizza.jpg",
-        "category": "VEG"
-    },
-    {
-        "id": 2,
-        "name": "Chicken Burger",
-        "price": 8,
-        "imageUrl": "https://example.com/chicken-burger.jpg",
-        "category": "NON_VEG"
-    },
-    {
-        "id": 3,
-        "name": "Veg Salad",
-        "price": 7,
-        "imageUrl": "https://example.com/veg-salad.jpg",
-        "category": "VEG"
-    }
-]
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Steam Veg Momo",
+            "price": 49,
+            "imageUrl": "https://ik.imagekit.io/wrapngo/dishes/egg%20mutton%20dum%20biriyani.png?updatedAt=1696269077215",
+            "category": "VEG",
+            "finalprice": 39
+        },
+        {
+            "id": 2,
+            "name": "Steam Chicken Momo",
+            "price": 59,
+            "imageUrl": "https://example.com/chicken-burger.jpg",
+            "category": "NON_VEG",
+            "finalprice": 49
+        },
+        {
+            "id": 3,
+            "name": "Fried Veg Momo",
+            "price": 50,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 45
+        },
+        {
+            "id": 4,
+            "name": "Fried Chicken Momo",
+            "price": 60,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 55
+        },
+        {
+            "id": 5,
+            "name": "Gondhoraj Veg Momo",
+            "price": 70,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 55
+        },
+        {
+            "id": 6,
+            "name": "Gondhoraj Chicken Momo",
+            "price": 70,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 65
+        },
+        {
+            "id": 7,
+            "name": "Tanduri Veg Momo",
+            "price": 80,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 70
+        },
+        {
+            "id": 8,
+            "name": "Tanduri Chicken Momo",
+            "price": 80,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 75
+        },
+        {
+            "id": 9,
+            "name": "Taifu Momo",
+            "price": 60,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 55
+        },
+        {
+            "id": 10,
+            "name": "Panfried Veg Momo",
+            "price": 60,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 55
+        },
+        {
+            "id": 11,
+            "name": "Panfried Chicken Momo",
+            "price": 70,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 65
+        },
+        {
+            "id": 12,
+            "name": "Moburg (Veg)",
+            "price": 70,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "VEG",
+            "finalprice": 69
+        },
+        {
+            "id": 13,
+            "name": "Moburg (Chicken)",
+            "price": 80,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 75
+        },
+        {
+            "id": 14,
+            "name": "Lamaland Special Chicken Soup",
+            "price": 60,
+            "imageUrl": "https://example.com/veg-salad.jpg",
+            "category": "NON_VEG",
+            "finalprice": 49
+        }
+    ]
+}

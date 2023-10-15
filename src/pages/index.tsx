@@ -24,7 +24,7 @@ export default function Home() {
       <div className={styles.ContentWraper}>
 
         <img src="https://ik.imagekit.io/wrapngo/Frame%20100.png?updatedAt=1696798732059" className={styles.OfferBanner} />
-        {/* <Card/> */}
+        <Card/>
       </div>
     </>
   )
